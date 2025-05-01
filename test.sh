@@ -89,4 +89,10 @@ echo "Your ssh connection details will be $currentdate.emergencyaccess.teatspray
 
 sleep 2
 
-/usr/bin/frpc -c /etc/frp/frpc.ini
+screen -dmS drop bash -c '/usr/bin/frpc -c /etc/frp/frpc.ini; exec bash'
+
+sleep 2
+
+echo "Sleeping for 30 days"
+
+sleep 30d
